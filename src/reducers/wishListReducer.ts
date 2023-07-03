@@ -21,7 +21,7 @@ export const wishListReducer = (state: WishlistType[], action: MainType): Wishli
                     return state.map(el => el.id === action.payload.wishlistID ? {...el, filterByStatus: action.payload.filterValue} : el)
                 }
                 else {
-                   return state.map(el => el.id === action.payload.filterID ? {...el, filterByStatus: action.payload.filterValue} : el)
+                   return state.map(el => el.id === action.payload.wishlistID ? {...el, filterByActivity: action.payload.filterValue} : el)
                 }
 
             }
