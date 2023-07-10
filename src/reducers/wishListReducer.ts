@@ -1,6 +1,14 @@
 import {OsType, WishlistType} from '../App';
 import {v1} from "uuid";
 
+export const wishlistID1 = v1();
+export const wishlistID2 = v1();
+
+const itinialState: WishlistType[] = [
+    {id: wishlistID1, category: "phones", filterByActivity: 'All', filterByStatus: 'All'},
+    {id: wishlistID2, category: "books", filterByActivity: 'All', filterByStatus: 'All'}
+]
+
 export const wishListReducer = (state: WishlistType[], action: MainType): WishlistType[] => {
         switch (action.type) {
             case 'ADD-WISHLIST': {
